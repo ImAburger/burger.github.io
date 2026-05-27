@@ -45,7 +45,7 @@
       display: flex;
       align-items: stretch;
       justify-content: center;
-      padding: 2vh 2vw;
+      padding: 1.5vh 1.5vw;
       z-index: 1;
     }
 
@@ -55,7 +55,7 @@
       display: flex;
       flex-direction: column;
       background: var(--parchment);
-      padding: 3vh 3vw;
+      padding: 2vh 2.2vw;
       overflow: hidden;
       position: relative;
     }
@@ -112,8 +112,8 @@
     /* ── Page header ── */
     .page-header {
       text-align: center;
-      margin-bottom: 2vh;
-      padding-bottom: 1vh;
+      margin-bottom: 1vh;
+      padding-bottom: 0.6vh;
       border-bottom: 1.5px solid var(--rule);
       position: relative;
       z-index: 1;
@@ -121,7 +121,7 @@
 
     .page-header h2 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+      font-size: clamp(0.95rem, 1.8vw, 1.35rem);
       color: var(--accent);
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -133,7 +133,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 1.5vh;
+      gap: 0.8vh;
       position: relative;
       z-index: 1;
       overflow: hidden;
@@ -144,8 +144,8 @@
       flex: 1;
       display: flex;
       align-items: center;
-      gap: 1.8vw;
-      padding: 1.2vh 1.2vw;
+      gap: 1.2vw;
+      padding: 0.7vh 1vw;
       border-radius: 6px;
       background: rgba(255,255,255,0.3);
       border: 1px solid var(--rule);
@@ -167,7 +167,7 @@
     /* ── Project thumbnail ── */
     .thumb-wrap {
       flex-shrink: 0;
-      width: clamp(90px, 12vw, 180px);
+      width: clamp(70px, 9vw, 145px);
       aspect-ratio: 16/10;
       border-radius: 5px;
       overflow: hidden;
@@ -189,7 +189,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-size: clamp(1.2rem, 2.2vw, 1.8rem);
       color: var(--rule);
     }
 
@@ -198,12 +198,12 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 0.5vh;
+      gap: 0.3vh;
     }
 
     .project-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1rem, 1.6vw, 1.35rem);
+      font-size: clamp(0.85rem, 1.3vw, 1.15rem);
       font-weight: 700;
       color: var(--ink);
       line-height: 1.2;
@@ -211,18 +211,18 @@
 
     .project-desc {
       font-family: 'Lora', Georgia, serif;
-      font-size: clamp(0.9rem, 1.25vw, 1.1rem);
+      font-size: clamp(0.78rem, 1.05vw, 0.97rem);
       color: var(--ink-mid);
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     /* ── Footer ── */
     .page-footer {
       text-align: center;
-      margin-top: 1.5vh;
-      padding-top: 1vh;
+      margin-top: 0.8vh;
+      padding-top: 0.6vh;
       border-top: 1.5px solid var(--rule);
-      font-size: clamp(0.75rem, 1vw, 0.9rem);
+      font-size: clamp(0.7rem, 0.9vw, 0.85rem);
       color: var(--ink-mid);
       font-style: italic;
       position: relative;
@@ -311,6 +311,20 @@
         </div>
       </a>
 
+      <!-- Project 4 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Four</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
     </div><!-- /projects -->
 
     <div class="page-footer">
@@ -334,20 +348,6 @@
 
     <div class="projects">
 
-      <!-- Project 4 -->
-      <a class="project" href="YOUR_LINK_HERE" target="_blank">
-        <div class="thumb-wrap">
-          <div class="thumb-placeholder">🖼️</div>
-        </div>
-        <div class="project-text">
-          <div class="project-title">Project Title Four</div>
-          <div class="project-desc">
-            A short description of this project — what it does, the tools or
-            technologies used, and what makes it worth exploring.
-          </div>
-        </div>
-      </a>
-
       <!-- Project 5 -->
       <a class="project" href="YOUR_LINK_HERE" target="_blank">
         <div class="thumb-wrap">
@@ -369,6 +369,34 @@
         </div>
         <div class="project-text">
           <div class="project-title">Project Title Six</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 7 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Seven</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 8 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Eight</div>
           <div class="project-desc">
             A short description of this project — what it does, the tools or
             technologies used, and what makes it worth exploring.
