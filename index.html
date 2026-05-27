@@ -1,187 +1,393 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 
-<h1 style="font-family: Georgia, serif; letter-spacing: 0.1em;">✦ My Portfolio ✦</h1>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-</div>
+    :root {
+      --parchment:   #f5efe4;
+      --parchment-2: #ede4d3;
+      --ink:         #2c2416;
+      --ink-mid:     #5c4f3a;
+      --rule:        #c9b48a;
+      --spine-l:     #a08c6e;
+      --spine-c:     #e8dcc8;
+      --accent:      #7a4f2d;
+      --shadow:      rgba(44, 36, 22, 0.18);
+    }
 
----
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: #2c2416;
+      font-family: 'Lora', Georgia, serif;
+    }
 
-<div align="center">
+    /* ── Desk texture behind the book ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 60%, #4a3828 0%, #2c2416 70%);
+      z-index: 0;
+    }
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!--                    OPEN BOOK LAYOUT                    -->
-<!-- ═══════════════════════════════════════════════════════ -->
+    /* ── Book wrapper ── */
+    .book {
+      position: fixed; inset: 0;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 2vh 2vw;
+      z-index: 1;
+    }
 
-<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate; border-spacing:0; margin: 0 auto;">
-  <tr>
+    /* ── Pages ── */
+    .page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: var(--parchment);
+      padding: 3vh 3vw;
+      overflow: hidden;
+      position: relative;
+    }
 
-    <!-- ░░░░░░░░░░░  LEFT PAGE  ░░░░░░░░░░░ -->
-    <td valign="top" width="380" style="
-      background: #faf7f2;
-      border: 2px solid #c9b99a;
+    /* Subtle ruled-paper lines */
+    .page::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent calc(1lh + 0.8rem - 1px),
+        var(--rule) calc(1lh + 0.8rem - 1px),
+        var(--rule) calc(1lh + 0.8rem)
+      );
+      background-size: 100% 2.8rem;
+      background-position: 0 5.5rem;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .page-left {
+      border-radius: 10px 0 0 10px;
+      border: 2px solid var(--rule);
       border-right: none;
-      border-radius: 8px 0 0 8px;
-      padding: 36px 32px;
-      box-shadow: -4px 4px 18px rgba(0,0,0,0.12);
-    ">
+      box-shadow: -6px 0 24px var(--shadow), inset -8px 0 20px rgba(0,0,0,0.06);
+    }
 
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
-
-<!-- ── LEFT · Project 1 ── -->
-<tr>
-  <td align="center" style="padding-bottom: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 1 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title One</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
-
-<!-- ── LEFT · Project 2 ── -->
-<tr>
-  <td align="center" style="padding-bottom: 28px; border-top: 1px dashed #d4c9b5; padding-top: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 2 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title Two</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
-
-<!-- ── LEFT · Project 3 ── -->
-<tr>
-  <td align="center" style="border-top: 1px dashed #d4c9b5; padding-top: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 3 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title Three</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
-
-</table>
-
-    </td>
-
-    <!-- ░░░░░░░░░░░  SPINE  ░░░░░░░░░░░ -->
-    <td width="18" style="
-      background: linear-gradient(to right, #b5a48a, #e8ddd0, #b5a48a);
-      border-top: 2px solid #c9b99a;
-      border-bottom: 2px solid #c9b99a;
-      min-height: 100%;
-    "></td>
-
-    <!-- ░░░░░░░░░░░  RIGHT PAGE  ░░░░░░░░░░░ -->
-    <td valign="top" width="380" style="
-      background: #faf7f2;
-      border: 2px solid #c9b99a;
+    .page-right {
+      border-radius: 0 10px 10px 0;
+      border: 2px solid var(--rule);
       border-left: none;
-      border-radius: 0 8px 8px 0;
-      padding: 36px 32px;
-      box-shadow: 4px 4px 18px rgba(0,0,0,0.12);
-    ">
+      box-shadow: 6px 0 24px var(--shadow), inset 8px 0 20px rgba(0,0,0,0.06);
+    }
 
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    /* ── Spine ── */
+    .spine {
+      width: clamp(18px, 2vw, 32px);
+      flex-shrink: 0;
+      background: linear-gradient(
+        to right,
+        var(--spine-l) 0%,
+        var(--spine-c) 40%,
+        var(--spine-c) 60%,
+        var(--spine-l) 100%
+      );
+      border-top: 2px solid var(--rule);
+      border-bottom: 2px solid var(--rule);
+      box-shadow: 0 0 16px rgba(0,0,0,0.35);
+      position: relative;
+      z-index: 2;
+    }
 
-<!-- ── RIGHT · Project 4 ── -->
-<tr>
-  <td align="center" style="padding-bottom: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 4 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title Four</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
+    /* ── Page header ── */
+    .page-header {
+      text-align: center;
+      margin-bottom: 2vh;
+      padding-bottom: 1vh;
+      border-bottom: 1.5px solid var(--rule);
+      position: relative;
+      z-index: 1;
+    }
 
-<!-- ── RIGHT · Project 5 ── -->
-<tr>
-  <td align="center" style="padding-bottom: 28px; border-top: 1px dashed #d4c9b5; padding-top: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 5 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title Five</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
+    .page-header h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-<!-- ── RIGHT · Project 6 ── -->
-<tr>
-  <td align="center" style="border-top: 1px dashed #d4c9b5; padding-top: 28px;">
-    <a href="YOUR_LINK_HERE">
-      <img
-        src="https://via.placeholder.com/280x160/e8e0d5/8a7966?text=Project+Screenshot"
-        width="280"
-        style="border-radius:6px; border:1px solid #d4c9b5; display:block;"
-        alt="Project 6 screenshot"
-      />
-    </a>
-    <br/>
-    <strong>🔖 Project Title Six</strong><br/>
-    <sub>
-      A short description of this project goes here — what it does,<br/>
-      the tech stack used, and what makes it interesting.
-    </sub>
-  </td>
-</tr>
+    /* ── Projects container ── */
+    .projects {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5vh;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+    }
 
-</table>
+    /* ── Single project card ── */
+    .project {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 1.8vw;
+      padding: 1.2vh 1.2vw;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.3);
+      border: 1px solid var(--rule);
+      transition: background 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
 
-    </td>
+    .project:hover {
+      background: rgba(255,255,255,0.55);
+      box-shadow: 0 2px 12px var(--shadow);
+    }
 
-  </tr>
-</table>
+    .project:not(:last-child) {
+      border-bottom: 1px dashed var(--rule);
+    }
 
-</div>
+    /* ── Project thumbnail ── */
+    .thumb-wrap {
+      flex-shrink: 0;
+      width: clamp(90px, 12vw, 180px);
+      aspect-ratio: 16/10;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1.5px solid var(--rule);
+      background: var(--parchment-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
----
+    .thumb-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-<div align="center">
-  <sub>📬 <a href="mailto:your@email.com">your@email.com</a> &nbsp;·&nbsp; 💼 <a href="YOUR_LINKEDIN">LinkedIn</a> &nbsp;·&nbsp; 🐦 <a href="YOUR_TWITTER">Twitter</a></sub>
-</div>
+    .thumb-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--rule);
+    }
+
+    /* ── Project text ── */
+    .project-text {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vh;
+    }
+
+    .project-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1rem, 1.6vw, 1.35rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .project-desc {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(0.9rem, 1.25vw, 1.1rem);
+      color: var(--ink-mid);
+      line-height: 1.55;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center;
+      margin-top: 1.5vh;
+      padding-top: 1vh;
+      border-top: 1.5px solid var(--rule);
+      font-size: clamp(0.75rem, 1vw, 0.9rem);
+      color: var(--ink-mid);
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.6em;
+    }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── Page-number ornament ── */
+    .page-num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+      letter-spacing: 0.1em;
+      color: var(--rule);
+      margin-top: 0.4vh;
+    }
+
+    /* ── Fade-in on load ── */
+    .book { animation: bookOpen 0.7s cubic-bezier(.22,.68,0,1.2) both; }
+    @keyframes bookOpen {
+      from { opacity: 0; transform: scaleX(0.88) translateY(10px); }
+      to   { opacity: 1; transform: scaleX(1) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="book">
+
+  <!-- ═══════════ LEFT PAGE ═══════════ -->
+  <div class="page page-left">
+
+    <div class="page-header">
+      <h2>✦ &nbsp; Portfolio &nbsp; ✦</h2>
+    </div>
+
+    <div class="projects">
+
+      <!-- Project 1 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <!-- Replace src with your screenshot URL, or remove <img> to keep the emoji -->
+          <!-- <img src="screenshot1.png" alt="Project One screenshot" /> -->
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title One</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Two</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Three</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /projects -->
+
+    <div class="page-footer">
+      <a href="mailto:your@email.com">your@email.com</a>
+      &middot;
+      <a href="YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <span class="page-num">— i —</span>
+    </div>
+
+  </div><!-- /page-left -->
+
+  <!-- ═══════════ SPINE ═══════════ -->
+  <div class="spine"></div>
+
+  <!-- ═══════════ RIGHT PAGE ═══════════ -->
+  <div class="page page-right">
+
+    <div class="page-header">
+      <h2>✦ &nbsp; Portfolio &nbsp; ✦</h2>
+    </div>
+
+    <div class="projects">
+
+      <!-- Project 4 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Four</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 5 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Five</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 6 -->
+      <a class="project" href="YOUR_LINK_HERE" target="_blank">
+        <div class="thumb-wrap">
+          <div class="thumb-placeholder">🖼️</div>
+        </div>
+        <div class="project-text">
+          <div class="project-title">Project Title Six</div>
+          <div class="project-desc">
+            A short description of this project — what it does, the tools or
+            technologies used, and what makes it worth exploring.
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /projects -->
+
+    <div class="page-footer">
+      <a href="YOUR_GITHUB" target="_blank">GitHub</a>
+      &middot;
+      <a href="YOUR_TWITTER" target="_blank">Twitter / X</a>
+      <span class="page-num">— ii —</span>
+    </div>
+
+  </div><!-- /page-right -->
+
+</div><!-- /book -->
+
+</body>
+</html>
